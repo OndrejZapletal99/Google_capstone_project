@@ -1,5 +1,5 @@
 # Google_capstone_project
-##Google Data Analytics Professional Certificate: Capstone Project
+Google Data Analytics Professional Certificate: Capstone Project
 
 
   My version of capstone project.
