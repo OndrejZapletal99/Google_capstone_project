@@ -7,8 +7,8 @@ Google Data Analytics Professional Certificate: Capstone Project
   
 
 
-1.Ask
-2.Prepare
+## 1.Ask
+## 2.Prepare
 3.Process
 4.Analyze
 5.Share
