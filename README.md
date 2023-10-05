@@ -1,13 +1,13 @@
 # Bellabeat Case Study
-*Google Data Analytics Professional Certificate: Capstone Project*
+- *Google Data Analytics Professional Certificate: Capstone Project*
 
-Using Excel, SQL & Tableau
+- Using Excel, SQL & Tablea
 
-## Table of Contents
-- [Bellabeat Case Study](#bellabeat-case-study)
-  - [Table of Contents](#table-of-contents)
+---
+
+- ## Table of content
   - [1. Company](#1-company)
-    - [Products](#products)
+    - [1.1 Products](#11-products)
   - [2. Ask](#2-ask)
     - [2.1 Business task](#21-business-task)
     - [2.2 Stakeholders](#22-stakeholders)
@@ -16,8 +16,7 @@ Using Excel, SQL & Tableau
   - [5. Analyze](#5-analyze)
   - [6. Share](#6-share)
   - [7. Act](#7-act)
-
-
+---
 ## 1. Company
 Bellabeat is a high-tech company that manufactures health-focused smart product. Company was founded by Urška Sršen and Sando Mur. Bellabeat has grown very quickly due to products that aim to women.
 
@@ -27,7 +26,7 @@ Since 2016 Bellabeat has offices around the world and brought many products to t
 
 Right now they want to make analysis of their customer's data, because it is a opportunity for growth and the company can simply focus on customer needs.
 
-### Products
+### 1.1 Products
 - **Bellabeat app** - Provides users with their health data.
 - **Leaf** - Classis wellness tracker that can be worn as clip, necklace or bracelet
 - **Time** - High-tech wellnes watches
