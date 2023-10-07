@@ -17,6 +17,9 @@
     - [3.3 Data summary and organization](#33-data-summary-and-organization)
       - [3.3.1 Limitation](#331-limitation)
   - [4. Process](#4-process)
+    - [4.1 Selected datasets](#41-selected-datasets)
+    - [4.2 Excel for data cleaning](#42-excel-for-data-cleaning)
+    - [4.3 Preparing for SQL data analysis](#43-preparing-for-sql-data-analysis)
   - [5. Analyze](#5-analyze)
   - [6. Share](#6-share)
   - [7. Act](#7-act)
@@ -62,6 +65,30 @@ The data was collected by survey via Amazon Mechanical Turk between 03.12.2016-0
 - The possibility of inaccurate conclusion due to old data from 2016
 - No additional demographic information
 ## 4. Process
+---
+### 4.1 Selected Datasets
+For the Bellabeat case study the following datasets were chosen:
+- dailyActivity_merged
+- dailySteps_merged
+- sleepDay_merged
+### 4.2 Excel for data cleaning
+1. Impoerting data from CSV to excel file
+2. Removing duplicates
+3. Check column ID that the records have the exact number of the characters (10)
+4. Check column ActivityDate that the records have the same format of date (mm/dd/yyyy)
+5. Farmating the numerical data to be a number with 0 or 1 decimal place.
+6. Column TrackerDistance deleted (same values as TotalDistance)
+7. Column LoggedActivitiesDistance deleted (only zero values)
+8. Added Column Day (text function) based on Activity date column
+9. Deleted all rows with zero values in all columns (dailyActivity_merged file)
+10. Deleted all rows with zero values in "StepsTotal" column. (dailySteps_merged file)
+11. Export to CSV
+### 4.3 Preparing for SQL data analysis
+After cleaning all the data and exporting them to CSV file, I decided to import the data to the BigQuery (SQL).
+SQl is probably the biggest data analysis skill you need to know how to work with.
+1. Create a project in the BiqQuery
+2. Create a dataset and tables
+3. Import the data from CSV to tables
 ## 5. Analyze
 ## 6. Share
 ## 7. Act
