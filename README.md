@@ -98,17 +98,15 @@ SELECT
   COUNT(DISTINCT Id) AS Users_number_activity
  FROM `bellabeat-401316.bellabeat.daily_activity`;
 ```
-- 33 users for dailyActivity file
  ```
 SELECT 
   COUNT (DISTINCT Id) AS Users_number_sleep
  FROM `bellabeat-401316.bellabeat.daily_sleep`;
 ``` 
-- 24 users for dailySleep file
  ```
 SELECT 
   COUNT(DISTINCT Id) AS Users_nember_steps
  FROM `bellabeat-401316.bellabeat.daily_steps`;
 ```
--33 users for daily_Steps file
+Two datasets (dailyActivity and dailySteps ) have 33 users and dataset of dailySleep has 24 users
 ## 7. Act
