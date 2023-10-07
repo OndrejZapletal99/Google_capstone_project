@@ -21,7 +21,7 @@
     - [4.2 Excel for data cleaning](#42-excel-for-data-cleaning)
     - [4.3 Preparing for SQL data analysis](#43-preparing-for-sql-data-analysis)
   - [5. Analyze](#5-analyze)
-  - [6. Share](#6-share)
+    - [5.1 Number of users](#51-number-of-users)
   - [7. Act](#7-act)
 ---
 ## 1. Company
@@ -89,6 +89,26 @@ SQl is probably the biggest data analysis skill you need to know how to work wit
 1. Create a project in the BiqQuery
 2. Create a dataset and tables
 3. Import the data from CSV to tables
-## 5. Analyze
-## 6. Share
+## 5. Analyze & Share
+---
+### 5.1 Number of users 
+Number of users for easch dataset by SELECT, COUNT and DISTINCT in SQL.
+```
+SELECT 
+  COUNT(DISTINCT Id) AS Users_number_activity
+ FROM `bellabeat-401316.bellabeat.daily_activity`;
+```
+- 33 users for dailyActivity file
+ ```
+SELECT 
+  COUNT (DISTINCT Id) AS Users_number_sleep
+ FROM `bellabeat-401316.bellabeat.daily_sleep`;
+``` 
+- 24 users for dailySleep file
+ ```
+SELECT 
+  COUNT(DISTINCT Id) AS Users_nember_steps
+ FROM `bellabeat-401316.bellabeat.daily_steps`;
+```
+-33 users for daily_Steps file
 ## 7. Act
