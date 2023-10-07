@@ -22,6 +22,8 @@
     - [4.3 Preparing for SQL data analysis](#43-preparing-for-sql-data-analysis)
   - [5. Analyze](#5-analyze)
     - [5.1 Number of users](#51-number-of-users)
+    - [5.2 Users insights](#52-users-insights)
+      - [5.2.1 Users activity](#521-users-activity)
   - [7. Act](#7-act)
 ---
 ## 1. Company
@@ -108,5 +110,27 @@ SELECT
   COUNT(DISTINCT Id) AS Users_nember_steps
  FROM `bellabeat-401316.bellabeat.daily_steps`;
 ```
-Two datasets (dailyActivity and dailySteps ) have 33 users and dataset of dailySleep has 24 users
+- Two datasets (dailyActivity and dailySteps ) have 33 users and dataset of dailySleep has 24 users
+### 5.2 Users insights
+#### 5.2.1 Users activity
+It is important to know how many days we have in the dailyActivity dataset.
+ ```
+SELECT 
+  COUNT(DISTINCT ActivityDate) AS Users_number_activity
+ FROM `bellabeat-401316.bellabeat.daily_activity`;
+```
+The result of SQL code is 31 days.
+Next, I wanted to know how active users were. So i created four groups by number of active days.
+ ```
+SELECT 
+  COUNT(Id) AS logged,
+  CASE
+    WHEN COUNT(Id) < 14 THEN 'Light activity'
+    WHEN count(Id) < 24 THEN 'Moderate activity'
+    WHEN COUNT(Id) < 31 THEN 'High activity'
+    ELSE 'Everyday user'
+  END Activity_status
+ FROM `bellabeat-401316.bellabeat.daily_activity`
+ GROUP BY Id;
+```
 ## 7. Act
