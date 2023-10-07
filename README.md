@@ -119,8 +119,8 @@ SELECT
   COUNT(DISTINCT ActivityDate) AS Users_number_activity
  FROM `bellabeat-401316.bellabeat.daily_activity`;
 ```
-The result of SQL code is 31 days.
-Next, I wanted to know how active users were. So i created four groups by number of active days.
+The result of SQL code is **31 days**.
+Next, I wanted to know how active users were. So I created four groups by number of active days.
  ```
 SELECT 
   COUNT(Id) AS logged,
