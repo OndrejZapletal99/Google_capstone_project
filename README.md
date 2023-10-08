@@ -241,4 +241,4 @@ s.Id,
 2. More than 61 % of users do not achieve 10 000 steps/ day and 21 % users do not even walk 5000 steps. The company could launch a campaign on the topic of minimum steps for a good health.
 3. More then 50% of users do not sleep enough. The company could launch a campaign on the topic of hours asleep for a good health.
 4. I would recommend that Bellabeat should focus on women that have sedentary job and lifestyle.
-5. For the next survey would be fine to have data about demographic, larger sample size and longer period of data colleting.
+5. For the next survey would be fine to have data about demographic, larger sample size and longer period of data collecting.
