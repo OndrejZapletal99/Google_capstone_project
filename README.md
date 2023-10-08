@@ -200,22 +200,22 @@ GROUP BY Id;
 >The grapf shows us that only 13 users (39%) are very activ or active, i.e. more than 10 000 steps, and 20 users (61%) are less then 10 000 steps per day.
 #### 5.2.4 Sleep breakdowns
 A Sleepfoundation.org article [Sleep Calculator: Your Personalized Tool for Sleep](https://www.sleepfoundation.org/sleep-calculator) in 2023 which found that 7 or more hours is a reasonable target for healthy adults. So I divided users into two categories:
-- **Not enought of time asleep** - less then 7 hours
-- **Enought of time asleep** - 7 and more hours 
+- **Not enough of time asleep** - less then 7 hours
+- **Enough of time asleep** - 7 and more hours 
 ```
 SELECT 
   Id,
   (AVG(TotalMinutesAsleep)/60) as Asleep_time,
   CASE
-    WHEN (AVG(TotalMinutesAsleep)/60) < 7.0 THEN "not enought of time asleep"
-    ELSE "enought of time asleep"
+    WHEN (AVG(TotalMinutesAsleep)/60) < 7.0 THEN "not enough of time asleep"
+    ELSE "enough of time asleep"
   END sleep_status,
  FROM `bellabeat-401316.bellabeat.daily_sleep`
  GROUP BY Id;
 ```
 ![Users status asleep](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/user_status_asleep.png)
 
->The graph shows us that only 50% of users have enought time of asleep.
+>The graph shows us that only 50% of users have enough time of asleep.
 
 The next graph will confirm or refute the hypothesis that people with 10 000 steps sleep aroud 8 and more hours.
 
@@ -233,4 +233,11 @@ s.Id,
 
  >The graph shows us that people with 10 000 steps (aprox.) sleep around 7-8 hours in average. But the graph shows outliers, which can be measurement errors.
 
-## 7. Act
+## 7. Act - Summary a Recommendations
+1. More then 50 % of users are Light active or Moderate active in the use of device. Maybe it could be good prepare some challenges to use the device more. FOr example:
+  - daily, weeklyn mothly challenges
+  - notifications/reminders
+2. More than 61 % of users do not achieve 10 000 steps/ day and 21 % users do not even walk 5000 steps. The company could launch a campaign on the topic of minimum steps for a good health.
+3. More then 50% of users do not sleep enough. The company could launch a campaign on the topic of hours asleep for a good health.
+4. I would recommend that Bellabeat should focus on women that have sedentary job and lifestyle.
+5. For the next survey would be fine to have data about demographic.
