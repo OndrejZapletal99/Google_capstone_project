@@ -26,6 +26,7 @@
       - [5.2.1 Users activity](#521-users-device-activity)
       - [5.2.2 Active daily minutes vs Sedentary daily minutes](#522-active-daily-minutes-vs-sedentary-daily-minutes)
       - [5.2.3 Steps breakdowns](#523-steps-breakdowns)
+      - [5.2.4 Sleep breakdowns](#524-sleep-breakdowns)
   - [7. Act](#7-act)
 ---
 ## 1. Company
@@ -197,4 +198,32 @@ GROUP BY Id;
 ```
 ![Users status by steps](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/users_status_steps.png)
 >The grapf shows us that only 13 users (39%) are very activ or active, i.e. more than 10 000 steps, and 20 users (61%) are less then 10 000 steps per day.
+
+#### 5.2.4 Sleep breakdowns
+A Sleepfoundation.org article [Sleep Calculator: Your Personalized Tool for Sleep](https://www.sleepfoundation.org/sleep-calculator) in 2023 which found that 7 or more hours is a reasonable target for healthy adults. So I divided users into two categories:
+- **Not enought of time asleep** - less then 7 hours
+- **Enought of time asleep** - 7 and more hours 
+```
+SELECT 
+  Id,
+  (AVG(TotalMinutesAsleep)/60) as Asleep_time,
+  CASE
+    WHEN (AVG(TotalMinutesAsleep)/60) < 7.0 THEN "not enought of time asleep"
+    ELSE "enought of time asleep"
+  END sleep_status,
+ FROM `bellabeat-401316.bellabeat.daily_sleep`
+ GROUP BY Id;
+```
+![Users status asleep]()
+```
+SELECT
+s.Id, 
+ AVG(TotalSteps) AS avg_total_steps,
+ AVG(TotalMinutesAsleep)/60 AS avg_total_hours_asleep
+ FROM `bellabeat-401316.bellabeat.daily_sleep` AS s
+ INNER JOIN `bellabeat-401316.bellabeat.daily_activity` AS a ON
+ s.Id = a. Id
+ GROUP BY s.Id;
+```
+ 
 ## 7. Act
