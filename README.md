@@ -25,6 +25,7 @@
     - [5.2 Users insights](#52-users-insights)
       - [5.2.1 Users activity](#521-users-device-activity)
       - [5.2.2 Active daily minutes vs Sedentary daily minutes](#522-active-daily-minutes-vs-sedentary-daily-minutes)
+      - [5.2.3 Steps breakdowns](#523-steps-breakdowns)
   - [7. Act](#7-act)
 ---
 ## 1. Company
@@ -122,10 +123,10 @@ SELECT
 ```
 The result of SQL code is **31 days**.
 Next, I wanted to know how active users were. So I created four groups by number of active days.
-- Light activity - less than 14 days of device using
-- Moderate activity - between 14 and 23 days of device using
-- High activity - between 24 and 30  days of device using
-- Everyday user - 31 days of device using
+- **Light activity** - less than 14 days of device using
+- **Moderate activity** - between 14 and 23 days of device using
+- **High activity** - between 24 and 30  days of device using
+- **Everyday user **- 31 days of device using
  ```
 SELECT 
   COUNT(Id) AS logged,
@@ -173,12 +174,12 @@ GROUP BY Day;
 >The grapf shows us that Tuesday and Saturday are the most active days. Monday is one of the most inactive days, probably because people have the most responsibilities at work and want to get things done in the city. The seond inactive say is Sunday, probably becasuse it is rest day for most people.
 
 A Healthline.com article [How many steps do I need a day?](https://www.healthline.com/health/how-many-steps-a-day#how-many-steps-per-day)written by Sara Lindberg in 2019 cited a 2011 study by Tudor-Locke et. al. titled “How many steps/day are enough? for adults” which found that 10,000 steps/day is a reasonable target for healthy adults. Lindberg (2019) breaks down activity level by steps into 6 categories based off the 2011 study by Tudor-Locke et. al.:
-- Basal - below 2500 steps/day
-- Limited - 2500-4999 steps/day
-- Low - 5000-7499 steps/day
-- Somewhat active - 7500-9999 steps/day
-- Active - 10000-12499 steps/day
-- Very active - over 125000 steps/day
+- **Basal** - below 2500 steps/day
+- **Limited** - 2500-4999 steps/day
+- **Low **- 5000-7499 steps/day
+- **Somewhat activ**e - 7500-9999 steps/day
+- **Active** - 10000-12499 steps/day
+- **Very activ**e - over 125000 steps/day
 ```
 SELECT
 Id,
