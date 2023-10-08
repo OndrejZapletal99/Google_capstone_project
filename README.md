@@ -214,7 +214,12 @@ SELECT
  FROM `bellabeat-401316.bellabeat.daily_sleep`
  GROUP BY Id;
 ```
-![Users status asleep]()
+![Users status asleep](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/user_status_asleep.png)
+
+>The graph shows us that only 50% of users have enought time of asleep.
+
+The next graph will confirm or refute the hypothesis that people with 10 000 steps sleep aroud 8 and more hours.
+
 ```
 SELECT
 s.Id, 
@@ -225,5 +230,8 @@ s.Id,
  s.Id = a. Id
  GROUP BY s.Id;
 ```
+ ![Sleep hypothesis](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/Steps_sleep_relation.png)
+
+ >The graph shows us that people with 10 000 steps (aprox.) sleep around 7-8 hours in average. But the graph shows outliers, which can be measurement errors.
  
 ## 7. Act
