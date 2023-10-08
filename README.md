@@ -1,7 +1,7 @@
 # Bellabeat Case Study
 - *Google Data Analytics Professional Certificate: Capstone Project*
 
-- Using Excel, SQL & Tableau
+- Using Excel, SQL & PowerBI
 
 ---
 
@@ -23,7 +23,7 @@
   - [5. Analyze](#5-analyze)
     - [5.1 Number of users](#51-number-of-users)
     - [5.2 Users insights](#52-users-insights)
-      - [5.2.1 Users activity](#521-users-activity)
+      - [5.2.1 Users activity](#521-users-device-activity)
   - [7. Act](#7-act)
 ---
 ## 1. Company
@@ -112,7 +112,7 @@ SELECT
 ```
 - Two datasets (dailyActivity and dailySteps ) have 33 users and dataset of dailySleep has 24 users
 ### 5.2 Users insights
-#### 5.2.1 Users activity
+#### 5.2.1 Users device activity
 It is important to know how many days we have in the dailyActivity dataset.
  ```
 SELECT 
@@ -121,6 +121,10 @@ SELECT
 ```
 The result of SQL code is **31 days**.
 Next, I wanted to know how active users were. So I created four groups by number of active days.
+- Light activity - less than 14 days of device using
+- Moderate activity - between 14 and 23 days of device using
+- High activity - between 24 and 30  days of device using
+- Everyday user - 31 days of device using
  ```
 SELECT 
   COUNT(Id) AS logged,
@@ -133,4 +137,7 @@ SELECT
  FROM `bellabeat-401316.bellabeat.daily_activity`
  GROUP BY Id;
 ```
+![Users device activity](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/user_device_activity.png)
+
+
 ## 7. Act
