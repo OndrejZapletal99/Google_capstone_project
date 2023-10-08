@@ -177,7 +177,7 @@ GROUP BY Day;
 A Healthline.com article [How many steps do I need a day?](https://www.healthline.com/health/how-many-steps-a-day#how-many-steps-per-day)written by Sara Lindberg in 2019 cited a 2011 study by Tudor-Locke et. al. titled “How many steps/day are enough? for adults” which found that 10,000 steps/day is a reasonable target for healthy adults. Lindberg (2019) breaks down activity level by steps into 6 categories based off the 2011 study by Tudor-Locke et. al.:
 - **Basal** - below 2500 steps/day
 - **Limited** - 2500-4999 steps/day
-- **Low **- 5000-7499 steps/day
+- **Low**- 5000-7499 steps/day
 - **Somewhat activ**e - 7500-9999 steps/day
 - **Active** - 10000-12499 steps/day
 - **Very activ**e - over 125000 steps/day
@@ -198,7 +198,6 @@ GROUP BY Id;
 ```
 ![Users status by steps](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/users_status_steps.png)
 >The grapf shows us that only 13 users (39%) are very activ or active, i.e. more than 10 000 steps, and 20 users (61%) are less then 10 000 steps per day.
-
 #### 5.2.4 Sleep breakdowns
 A Sleepfoundation.org article [Sleep Calculator: Your Personalized Tool for Sleep](https://www.sleepfoundation.org/sleep-calculator) in 2023 which found that 7 or more hours is a reasonable target for healthy adults. So I divided users into two categories:
 - **Not enought of time asleep** - less then 7 hours
@@ -233,5 +232,5 @@ s.Id,
  ![Sleep hypothesis](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/Steps_sleep_relation.png)
 
  >The graph shows us that people with 10 000 steps (aprox.) sleep around 7-8 hours in average. But the graph shows outliers, which can be measurement errors.
- 
+
 ## 7. Act
