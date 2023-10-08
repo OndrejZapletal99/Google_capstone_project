@@ -24,6 +24,7 @@
     - [5.1 Number of users](#51-number-of-users)
     - [5.2 Users insights](#52-users-insights)
       - [5.2.1 Users activity](#521-users-device-activity)
+      - [5.2.2 Active daily minutes vs Sedentary daily minutes](#522-active-daily-minutes-vs-sedentary-daily-minutes)
   - [7. Act](#7-act)
 ---
 ## 1. Company
@@ -145,9 +146,9 @@ SELECT
 SUM(VeryActiveMinutes + FairlyActiveMinutes + LightlyActiveMinutes) AS Daily_Active_Minutes,
 SUM(SedentaryMinutes) AS Daily_sedentary_minutes
 FROM `bellabeat-401316.bellabeat.daily_activity`;
-![Active daily minutes vs Sedentary daily minutes_month]()
+![Active daily minutes vs Sedentary daily minutes_month](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/Active_minute_sessedentary_minutes_month.png)
 ```
-Next I would like to show difference between Active daily minutes and Sedentary daily minutes by the weekdays.
+Next I would like to show difference between Active daily minutes and Sedentary daily minutes by a weekdays.
 ```
 SELECT 
 DAY,
@@ -157,4 +158,39 @@ FROM `bellabeat-401316.bellabeat.daily_activity`
 GROUP BY Day;
 ```
 ![Active daily minutes vs Sedentary daily minutes](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/active%20mintes_sedentary_minutes_days.png)
+#### 5.2.3 Steps breakdowns
+For first part of steps analysis it was necessary to calculate AVG of steps and SUM of steps by a weekdays.
+
+```
+SELECT
+Day,
+SUM(StepTotal) AS Sum_of_steps,
+AVG(StepTotal) AS Avg_of_steps,
+ FROM `bellabeat-401316.bellabeat.daily_steps` 
+GROUP BY Day;
+```
+
+
+A Healthline.com article [How many steps do I need a day?](https://www.healthline.com/health/how-many-steps-a-day#how-many-steps-per-day)written by Sara Lindberg in 2019 cited a 2011 study by Tudor-Locke et. al. titled “How many steps/day are enough? for adults” which found that 10,000 steps/day is a reasonable target for healthy adults. Lindberg (2019) breaks down activity level by steps into 6 categories based off the 2011 study by Tudor-Locke et. al.:
+- Basal - below 2500 steps/day
+- Limited - 2500-4999 steps/day
+- Low - 5000-7499 steps/day
+- Somewhat active - 7500-9999 steps/day
+- Active - 10000-12499 steps/day
+- Very active - over 125000 steps/day
+```
+SELECT
+Id,
+AVG(StepTotal) as avg_steps,
+CASE
+  WHEN AVG(StepTotal) <2500 THEN "Basal"
+  WHEN AVG(StepTotal) <5000 THEN "Limited"
+  WHEN AVG(StepTotal) <7500 THEN "Low"
+  WHEN AVG(StepTotal) <10000 THEN "Somewhat active"
+  WHEN AVG(StepTotal) <12500 THEN "Active"
+  ELSE "Very active"
+END Steps_status
+ FROM `bellabeat-401316.bellabeat.daily_steps`
+GROUP BY Id;
+```
 ## 7. Act
