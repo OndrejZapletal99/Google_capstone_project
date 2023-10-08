@@ -140,7 +140,13 @@ SELECT
 ![Users device activity](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/user_device_activity.png)
 #### 5.2.2 Active daily minutes vs Sedentary daily minutes
 First I wanted to show Piecahrt of Acitive daily minutes vs Sedentary minutes for a whole month.
-
+```
+SELECT 
+SUM(VeryActiveMinutes + FairlyActiveMinutes + LightlyActiveMinutes) AS Daily_Active_Minutes,
+SUM(SedentaryMinutes) AS Daily_sedentary_minutes
+FROM `bellabeat-401316.bellabeat.daily_activity`;
+![Active daily minutes vs Sedentary daily minutes_month]()
+```
 Next I would like to show difference between Active daily minutes and Sedentary daily minutes by the weekdays.
 ```
 SELECT 
@@ -150,5 +156,5 @@ SUM(SedentaryMinutes) AS Daily_sedentary_minutes
 FROM `bellabeat-401316.bellabeat.daily_activity` 
 GROUP BY Day;
 ```
-
+![Active daily minutes vs Sedentary daily minutes](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/active%20mintes_sedentary_minutes_days.png)
 ## 7. Act
