@@ -169,7 +169,9 @@ AVG(StepTotal) AS Avg_of_steps,
  FROM `bellabeat-401316.bellabeat.daily_steps` 
 GROUP BY Day;
 ```
+![SUM and AVG of steps by a weekdays](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/sum_avg_steps.png))
 
+>The grapf shows us that Tuesday and Saturday are the most active days. Monday is one of the most inactive days, probably because people have the most responsibilities at work and want to get things done in the city. The seond inactive say is Sunday, probably becasuse it is rest day for most people.
 
 A Healthline.com article [How many steps do I need a day?](https://www.healthline.com/health/how-many-steps-a-day#how-many-steps-per-day)written by Sara Lindberg in 2019 cited a 2011 study by Tudor-Locke et. al. titled “How many steps/day are enough? for adults” which found that 10,000 steps/day is a reasonable target for healthy adults. Lindberg (2019) breaks down activity level by steps into 6 categories based off the 2011 study by Tudor-Locke et. al.:
 - Basal - below 2500 steps/day
@@ -193,4 +195,6 @@ END Steps_status
  FROM `bellabeat-401316.bellabeat.daily_steps`
 GROUP BY Id;
 ```
+![Users status by steps](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/users_status_steps.png)
+>The grapf shows us that only 13 users (39%) are very activ or active, i.e. more than 10 000 steps, and 20 users (61%) are less then 10 000 steps per day.
 ## 7. Act
