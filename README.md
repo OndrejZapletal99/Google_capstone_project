@@ -33,8 +33,8 @@
 ---
 Bellabeat is a high-tech company that manufactures health-focused smart product. Company was founded by Urška Sršen and Sando Mur. Bellabeat has grown very quickly due to products that aim to women.
 
->                       "Tech-driven wellness company for woman"
-Bellabeat invests into Google Seaech, Facebook adds, Instagram Pages and Youtube videos to catch customers. 
+>                       "Tech-driven wellness company for women"
+Bellabeat invests into Google Search, Facebook adds, Instagram Pages and Youtube videos to catch customers. 
 Since 2016 Bellabeat has offices around the world and brought many products to the market.
 
 Right now they want to make analysis of their customer's data, because it is a opportunity for growth and the company can simply focus on customer needs.
@@ -77,11 +77,11 @@ For the Bellabeat case study the following datasets were chosen:
 - dailySteps_merged
 - sleepDay_merged
 ### 4.2 Excel for data cleaning
-1. Impoerting data from CSV to excel file
+1. Importing data from CSV to excel file
 2. Removing duplicates
 3. Check column ID that the records have the exact number of the characters (10)
 4. Check column ActivityDate that the records have the same format of date (mm/dd/yyyy)
-5. Farmating the numerical data to be a number with 0 or 1 decimal place.
+5. Formating the numerical data to be a number with 0 or 1 decimal place.
 6. Column TrackerDistance deleted (same values as TotalDistance)
 7. Column LoggedActivitiesDistance deleted (only zero values)
 8. Added Column Day (text function) based on Activity date column
@@ -113,7 +113,7 @@ SELECT
   COUNT(DISTINCT Id) AS Users_nember_steps
  FROM `bellabeat-401316.bellabeat.daily_steps`;
 ```
-- Two datasets (dailyActivity and dailySteps ) have 33 users and dataset of dailySleep has 24 users
+>Two datasets (dailyActivity and dailySteps ) have 33 users and dataset of dailySleep has 24 users
 ### 5.2 Users insights
 #### 5.2.1 Users device activity
 It is important to know how many days we have in the dailyActivity dataset.
@@ -142,14 +142,15 @@ SELECT
 ```
 ![Users device activity](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/user_device_activity.png)
 #### 5.2.2 Active daily minutes vs Sedentary daily minutes
-First I wanted to show Piecahrt of Acitive daily minutes vs Sedentary minutes for a whole month.
+First I wanted to show Piechart of Acitive daily minutes vs Sedentary minutes for a whole month.
 ```
 SELECT 
 SUM(VeryActiveMinutes + FairlyActiveMinutes + LightlyActiveMinutes) AS Daily_Active_Minutes,
 SUM(SedentaryMinutes) AS Daily_sedentary_minutes
 FROM `bellabeat-401316.bellabeat.daily_activity`;
-![Active daily minutes vs Sedentary daily minutes_month](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/Active_minute_sessedentary_minutes_month.png)
 ```
+![Active daily minutes vs Sedentary daily minutes_month](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/Active_minute_sessedentary_minutes_month.png)
+
 Next I would like to show difference between Active daily minutes and Sedentary daily minutes by a weekdays.
 ```
 SELECT 
@@ -240,4 +241,4 @@ s.Id,
 2. More than 61 % of users do not achieve 10 000 steps/ day and 21 % users do not even walk 5000 steps. The company could launch a campaign on the topic of minimum steps for a good health.
 3. More then 50% of users do not sleep enough. The company could launch a campaign on the topic of hours asleep for a good health.
 4. I would recommend that Bellabeat should focus on women that have sedentary job and lifestyle.
-5. For the next survey would be fine to have data about demographic.
+5. For the next survey would be fine to have data about demographic, larger sample size and longer period of data colleting.
