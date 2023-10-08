@@ -138,6 +138,17 @@ SELECT
  GROUP BY Id;
 ```
 ![Users device activity](https://github.com/OndrejZapletal99/Google_capstone_project/blob/main/PowerBi/user_device_activity.png)
+#### 5.2.2 Active daily minutes vs Sedentary daily minutes
+First I wanted to show Piecahrt of Acitive daily minutes vs Sedentary minutes for a whole month.
 
+Next I would like to show difference between Active daily minutes and Sedentary daily minutes by the weekdays.
+```
+SELECT 
+DAY,
+SUM(VeryActiveMinutes + FairlyActiveMinutes + LightlyActiveMinutes) AS Daily_Active_Minutes,
+SUM(SedentaryMinutes) AS Daily_sedentary_minutes
+FROM `bellabeat-401316.bellabeat.daily_activity` 
+GROUP BY Day;
+```
 
 ## 7. Act
